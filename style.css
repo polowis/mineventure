@@ -1,0 +1,158 @@
+:root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+    --primary-glow: radial-gradient(rgb(37 58 121 / 40%), rgba(1, 65, 255, 0));
+    --secondary-glow: linear-gradient(
+      to bottom right,
+      rgba(1, 65, 255, 0),
+      rgba(1, 65, 255, 0),
+      rgba(1, 65, 255, 0.3)
+    );
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+html,
+body {
+    max-width: 100vw;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    color: rgb(var(--foreground-rgb));
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        rgb(var(--background-end-rgb))
+    )
+        rgb(var(--background-start-rgb));
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.center {
+    background: var(--primary-glow);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-bar {
+    padding: 10px 20px;
+    position: fixed;
+    width: 100vw;
+    transition: 0.5s;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.body-content {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 3.5rem;
+    margin: 20px 0;
+    letter-spacing: 1.1px;
+}
+
+.banner-desc {
+    margin: 20px 0;
+    letter-spacing: 1.2px;
+    display: flex;
+    align-items: center;
+}
+
+.banner-desc-img {
+    margin-left: 6px;
+}
+
+.body-content-image {
+    flex: 1;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+
+.body-content-image-logo {
+   animation: blink 6s infinite;
+}
+
+
+@keyframes blink {
+    0%   {opacity: 0.8;}
+    20%  {opacity: 0.6;}
+    50%  {opacity: 0.4;}
+    70%  {opacity: 0.6;}
+    100% {opacity: 0.8;}
+}
+
+button {
+    padding: 12px 18px;
+    border-radius: 12px;
+    border: none;
+    min-width: 170px;
+    cursor: pointer;
+    background-color: #3c6cb4;
+    color: white;
+    font-size: 16px;
+    letter-spacing: 1.2px;
+}
+
+button:hover {
+    background-color: #244577;
+}
+
+.about-us {
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+}
+
+h2 {
+    margin: 16px 0;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.about-desc {
+    letter-spacing: 1.1px;
+    line-height: 1.5;
+    text-align: center;
+    font-size: 18px;
+}
+
+.follow {
+    letter-spacing: 2.3px;
+    margin: 16px 0;
+    text-align: center;
+    color: #919191;
+    font-size: 16px;
+}
+
+.twitter-icon:hover {
+    color: #3c6cb4;
+}
+
+.banner-twitter {
+    font-size: 32px;
+}
